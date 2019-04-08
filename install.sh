@@ -39,6 +39,7 @@ function install_bin {
     rm sd
   fi
   ln -s $dir/sd.sh sd
+  cd $dir
 }
 
 check_bin

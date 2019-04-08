@@ -100,13 +100,7 @@ function sel_dir() {
     fi
   done
   
-  #alias 666="cd $sel_dir"
-  shopt -s expand_aliases
-  shopt expand_aliases
-  alias 666="cd aa/bbb"
-  source ~/.bashrc
-  666
-  #cd $sel_dir
+  echo "cd $sel_dir"
 }
 
 function rem_all_dirs() {

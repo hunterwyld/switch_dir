@@ -11,6 +11,8 @@ In my daily work, I often have to switch among lots of directories in shell: cd 
 
 `sudo ./install.sh` to install **sd** to your /usr/local/bin or /usr/bin
 
+Please make sure install.sh and sd.sh are in the same directory.
+
 ### Usage
 
 After installation, type `sd -h` to see helping entries
