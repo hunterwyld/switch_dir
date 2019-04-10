@@ -100,7 +100,13 @@ function sel_dir() {
     fi
   done
   
-  echo "cd $sel_dir"
+  which xsel > /dev/null
+  if [ $? = 0 ]; then
+    echo "cd $sel_dir" | xsel -i -b
+    echo "'cd $sel_dir' now in clipboard, ctrl+v to paste it."
+  else 
+    echo "xsel not installed"
+  fi
 }
 
 function rem_all_dirs() {
