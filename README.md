@@ -22,12 +22,12 @@ Usage: sd [-option]
    or: sd [-option] [arg...]
 where options include:
    -h          show this help
-   -l          list all dirs
-   -s [no.]    select a dir to jump to, according to seq no.
+   -l          list all dirs you've added
+   -s [no.]    select a dir to switch to, according to seq no.
    -a .        add current dir
    -a [dir]    add absolute dir
    -r [no.]    remove absolute dir, according to seq no.
-   -rf         remove fake dirs
+   -ri         remove invalid dirs
    -R          remove all dirs
 
 ```
