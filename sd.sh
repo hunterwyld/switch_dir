@@ -124,7 +124,7 @@ function sel_dir() {
   
   which xsel > /dev/null
   if [ $? = 0 ]; then
-    echo "cd $sel_dir" | xsel -i -b
+    echo -n "cd $sel_dir" | xsel -i -b
     echo "press ctrl+v to switch to $sel_dir"
   else 
     echo "xsel not installed, switch to $sel_dir by yourself :)"
