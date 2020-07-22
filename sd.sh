@@ -122,12 +122,23 @@ function sel_dir() {
     return
   fi
   
-  which xsel > /dev/null
-  if [ $? = 0 ]; then
-    echo -n "cd $sel_dir" | xsel -i -b
-    echo "press ctrl+v to switch to $sel_dir"
-  else 
-    echo "xsel not installed, switch to $sel_dir by yourself :)"
+  sysOS=`uname -s`
+  if [ $sysOS = "Darwin" ]; then
+    which pbcopy > /dev/null
+    if [ $? = 0 ]; then
+      echo -n "cd $sel_dir" | pbcopy
+      echo "press cmd+v to switch to $sel_dir"
+    else
+      echo "pbcopy not installed, switch to $sel_dir by yourself :)"
+    fi
+  else
+    which xsel > /dev/null
+    if [ $? = 0 ]; then
+      echo -n "cd $sel_dir" | xsel -i -b
+      echo "press ctrl+v to switch to $sel_dir"
+    else
+      echo "xsel not installed, switch to $sel_dir by yourself :)"
+    fi
   fi
 }
 

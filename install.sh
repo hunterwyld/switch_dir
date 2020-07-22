@@ -8,7 +8,7 @@ function check_bin {
     echo 'sd.sh not found'
     exit -1
   else
-    chmod a+x sd.sh
+    chmod u+x sd.sh
   fi
 }
 
@@ -17,7 +17,7 @@ function create_data_dir {
   local data_dir="$user_home/.switch_dir"
   if [ ! -d $data_dir ]; then
     mkdir $data_dir
-    chmod a+w $data_dir
+    chmod u+w $data_dir
   fi
 }
 
